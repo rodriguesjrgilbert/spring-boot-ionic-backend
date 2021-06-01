@@ -28,7 +28,7 @@ public class Endereco implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "cidade_id")
 	private Cidade cidade;
@@ -46,7 +46,7 @@ public class Endereco implements Serializable {
 		this.bairro = bairro;
 		this.cep = cep;
 		this.cliente = cliente;
-		this.setCidade(cidade);
+		this.cidade = cidade;
 	}
 
 	public Integer getId() {
@@ -104,7 +104,7 @@ public class Endereco implements Serializable {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	
+
 	public Cidade getCidade() {
 		return cidade;
 	}
